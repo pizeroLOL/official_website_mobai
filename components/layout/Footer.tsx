@@ -1,5 +1,5 @@
 import Apple from "../icon/Apple";
-import Ubuntu from "../icon/Ubuntu";
+import Linux from "../icon/Linux";
 import Windows from "../icon/Windows";
 import { TransparentButton } from "../ui/Button";
 
@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/images/icons/logo_square.png"
+                src="/favicon.png"
                 alt="Class Widgets Logo"
                 className="h-10 w-10"
               />
@@ -74,7 +74,7 @@ const Footer = () => {
                 <span>macOS</span>
               </div>
               <div className="flex items-center gap-2 rounded-lg bg-[#1A1B26] p-3">
-                <Ubuntu className="h-6 w-6" />
+                <Linux className="h-6 w-6" />
                 <span>Linux</span>
               </div>
             </div>
