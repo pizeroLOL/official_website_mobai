@@ -44,6 +44,9 @@ importers:
       sharp-ico:
         specifier: ^0.1.5
         version: 0.1.5
+      starlight-nextjs-theme:
+        specifier: ^0.2.0
+        version: 0.2.0(@astrojs/starlight@0.34.3(astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.8.3)))
       tailwindcss:
         specifier: ^4.1.7
         version: 4.1.7
@@ -54,6 +57,9 @@ importers:
       '@types/react':
         specifier: ^19.1.6
         version: 19.1.6
+      astro-vtbot:
+        specifier: ^2.1.5
+        version: 2.1.5
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -1034,6 +1040,21 @@ packages:
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
 
+  '@vtbag/cam-shaft@1.0.6':
+    resolution: {integrity: sha512-Xy1bmJJLXuCqxmY2agwPfhGNv1XZViqh54H0VGK4mouGsItFsh8Mz/wWAP6mZwAOEuu9bEOJ1mJ+oNoaczZ1zw==}
+
+  '@vtbag/element-crossing@1.1.0':
+    resolution: {integrity: sha512-1YL609KPwhHUKRrVNfoogQCVJPfFrE5DubOLcCJZLHVCjWZ2ZAPcaq1wR2OP6nXD0Ok9JLX41YsEtYBYzw6CxQ==}
+
+  '@vtbag/inspection-chamber@1.0.21':
+    resolution: {integrity: sha512-7TWv9W7Nx5Dkp6Uak9gcLuaF3v10ErEuCcSiUbkN8GTvgjuAIHuV5EKTg+dI1wd7JRoWU840Jf4Avxa+yNyUmw==}
+
+  '@vtbag/turn-signal@1.3.1':
+    resolution: {integrity: sha512-6rWkG+ik3U+KQGI94yNOrOh5QedB9zmP/8H51X5WQwrJz8m2MAU5YwGRRcweO/dJ6wW/Bn7OsgC1vRURnwrvCg==}
+
+  '@vtbag/utensil-drawer@1.2.8':
+    resolution: {integrity: sha512-LEDmKkQFopa7hA3UklhX0I7KkK9r3eKPdkXvJBklLF+2GF5bczocCuD8YG3tejkwWlD5KE998dSr5Df6FuN1Mg==}
+
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -1087,6 +1108,9 @@ packages:
     resolution: {integrity: sha512-HN0jWTnhr7mIV/2e6uu4PPRNNo/k4UEgTLZqbp3MrHU+caCARveG2yZxaZVBmxyiVdYqW5Pd3u3n2zjnshixbw==}
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
+
+  astro-vtbot@2.1.5:
+    resolution: {integrity: sha512-sZLRjxhyXDiHPJc3kCEYRJjD3KYKunF2vlb2F0pYkFoIeTjVWuBdnkgGegz9Nc5zbNNRODtn7F5JVvOuTD5hgQ==}
 
   astro@5.8.0:
     resolution: {integrity: sha512-G57ELkdIntDiSrucA5lQaRtBOjquaZ9b9NIwoz2f471ZuuJcynLjWgItgBzlrz5UMY4WqnFbVWUCKlJb7nt9bA==}
@@ -2293,6 +2317,12 @@ packages:
   stack-trace@1.0.0-pre2:
     resolution: {integrity: sha512-2ztBJRek8IVofG9DBJqdy2N5kulaacX30Nz7xmkYF6ale9WBVmIy6mFBchvGX7Vx/MyjBhx+Rcxqrj+dbOnQ6A==}
     engines: {node: '>=16'}
+
+  starlight-nextjs-theme@0.2.0:
+    resolution: {integrity: sha512-JM6bTGhIKSDEXp58ALuphUKQMX/2PYPNAaACxVAPoEJnLd8rx/biRsvvcHb7djsrJI9E7j3KSdNacXuyRrTLww==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.34'
 
   stream-replace-string@2.0.0:
     resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
@@ -3532,6 +3562,16 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
+  '@vtbag/cam-shaft@1.0.6': {}
+
+  '@vtbag/element-crossing@1.1.0': {}
+
+  '@vtbag/inspection-chamber@1.0.21': {}
+
+  '@vtbag/turn-signal@1.3.1': {}
+
+  '@vtbag/utensil-drawer@1.2.8': {}
+
   acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
       acorn: 8.14.1
@@ -3573,6 +3613,14 @@ snapshots:
     dependencies:
       astro: 5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.8.3)
       rehype-expressive-code: 0.41.2
+
+  astro-vtbot@2.1.5:
+    dependencies:
+      '@vtbag/cam-shaft': 1.0.6
+      '@vtbag/element-crossing': 1.1.0
+      '@vtbag/inspection-chamber': 1.0.21
+      '@vtbag/turn-signal': 1.3.1
+      '@vtbag/utensil-drawer': 1.2.8
 
   astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.8.3):
     dependencies:
@@ -5327,6 +5375,10 @@ snapshots:
   space-separated-tokens@2.0.2: {}
 
   stack-trace@1.0.0-pre2: {}
+
+  starlight-nextjs-theme@0.2.0(@astrojs/starlight@0.34.3(astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.8.3))):
+    dependencies:
+      '@astrojs/starlight': 0.34.3(astro@5.8.0(@types/node@22.15.21)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.8.3))
 
   stream-replace-string@2.0.0: {}
 
