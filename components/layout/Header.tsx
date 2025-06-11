@@ -5,8 +5,20 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState('');
 
+  const normalizePath = (path: string) => path.endsWith('/') ? path.slice(0, -1) : path;
+
   useEffect(() => {
-    setCurrentPath(window.location.pathname);
+    setCurrentPath(normalizePath(new URL(window.location.href).pathname));
+
+    const handlePopstate = () => {
+      setCurrentPath(normalizePath(new URL(window.location.href).pathname));
+    };
+
+    window.addEventListener('popstate', handlePopstate);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopstate);
+    };
   }, []);
 
   return (
@@ -24,7 +36,7 @@ const Header = () => {
               key={item.href}
               href={item.href}
               className={`text-gray-200 hover:text-blue-500 transition-colors relative ${
-                currentPath === item.href
+                currentPath === normalizePath(item.href)
                   ? "after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#7dd3fc] after:transition-all"
                   : ""
               }`}
@@ -72,7 +84,7 @@ const Header = () => {
               key={item.href}
               href={item.href}
               className={`block text-gray-200 hover:text-blue-500 transition-colors py-2 relative ${
-                currentPath === item.href
+                currentPath === normalizePath(item.href)
                   ? "after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#7dd3fc] after:transition-all"
                   : ""
               }`}
