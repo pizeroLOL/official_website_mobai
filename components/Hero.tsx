@@ -63,14 +63,14 @@ const Hero = () => {
               </div>
               <div className="flex flex-row gap-4">
                 <TransparentButton
-                  href="/user_docs"
+                  href="https://cwdocs.rinlit.cn/user_docs"
                   className="flex w-fit flex-row items-center gap-2"
                   data-aos="fade-up"
                 >
                   <span className="text-lg lg:text-xl">文档</span>
                 </TransparentButton>
                 <TransparentButton
-                  href="https://www.yuque.com/rinlit/standards"
+                  href="https://cwdocs.rinlit.cn/standards/"
                   className="flex w-fit flex-row items-center gap-2"
                   data-aos="fade-up"
                 >
