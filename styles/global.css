@@ -1,19 +1,19 @@
 @import "tailwindcss";
 @import 'aos/dist/aos.css';
 
-@theme {
-  --color-mobai-background: #11121c;
-  --color-mobai-foreground: #ffffff;
+:root {
+  --color-background: #11121c;
+  --color-foreground: #ffffff;
 
-  --ease-mobai-bounce: cubic-bezier(0.84, 0, 0.165, 1);
-  --ease-mobai-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.84, 0, 0.165, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 
   --container-8xl: 96rem;
 }
 
 body {
-  background-color: var(--color-mobai-background);
-  color: var(--color-mobai-foreground);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 /* 添加动态渐变文本效果 */
@@ -28,7 +28,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
 .gradient-text {
   background: linear-gradient(45deg, #1a2980, #26d0ce, #1a2980);
   background-size: 200% 200%;
@@ -37,3 +36,48 @@ body {
   -webkit-text-fill-color: transparent;
   animation: gradient-animation 3s ease infinite;
 }
+
+/* 添加旋转动画关键帧（在1.1倍缩放状态下旋转一圈） */
+@keyframes rotate {
+  0% { transform: scale(1.1) rotate(0deg); }
+  100% { transform: scale(1.1) rotate(360deg); }
+}
+
+/* 添加爆炸动画关键帧 */
+@keyframes explode {
+  0% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  30% {
+    transform: scale(5);
+    opacity: 0.8;
+    filter: blur(10px);
+  }
+  70% {
+    transform: scale(8);
+    opacity: 0.3;
+    filter: blur(20px);
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+    filter: blur(30px);
+  }
+}
+
+/* 添加动画类 */
+.explode-animation {
+  animation: explode 0.5s ease-out forwards;
+}
+
+/* 添加动画类 */
+.shake-animation {
+  animation: rotate 0.5s ease-in-out;
+}
+
+.explode-animation {
+  animation: explode 1s ease-in-out forwards;
+}
+
